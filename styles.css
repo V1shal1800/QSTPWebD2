@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.MainLogo{
+    height: 100px;
+    width: 300px;
+}
+
+#savedNotes > .card{
+    margin: auto !important;
+    margin-bottom: 5px !important;
+}
