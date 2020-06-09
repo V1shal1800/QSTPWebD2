@@ -5,8 +5,17 @@ form.addBtn = document.querySelector('#addNote');
 
 const SavedNotes = document.querySelector('#savedNotes');
 
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+
 function addNote(){
-    let text = form.text.value;
+    let text = escapeHtml(form.text.value);
     let card = document.createElement('div');
     let note = document.createElement('div');
     let deleteButton = document.createElement('a');
@@ -22,6 +31,7 @@ function addNote(){
     card.appendChild(note);
 
     card.classList.add('card');
+    form.text.value = '';
 
     SavedNotes.appendChild(card);
 
