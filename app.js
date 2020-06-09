@@ -46,7 +46,7 @@ function addNote(){
         card.appendChild(note);
         }
         else{
-            alert("Field Can't be empty");
+            alert("Field Cannot be empty");
         }
     })
     
