@@ -38,10 +38,16 @@ function addNote(){
     editButton.addEventListener('click', function(e){
         e.preventDefault();
         let ntext =escapeHtml(prompt('Enter new text: ',""));
+        console.log(ntext);
+        if(ntext) {
         note.innerHTML = note.innerHTML = '<div class = "card-body"><div class = "card-title"><h3>Note</h3>' + '</div>' + ntext + '</div>';
         note.appendChild(editButton);
         note.appendChild(deleteButton);
         card.appendChild(note);
+        }
+        else{
+            alert("Field Can't be empty");
+        }
     })
     
 
